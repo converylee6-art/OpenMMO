@@ -1,0 +1,22 @@
+# Godot
+.godot/
+*.import
+export_presets.cfg
+.import/
+*.translation
+
+# Third-party models/sounds are PERSONAL USE ONLY and are never committed.
+# Keep them in assets/third_party/ locally; only our own work and manifests are tracked.
+assets/third_party/**
+!assets/third_party/README.md
+!assets/third_party/**/MANIFEST.md
+
+# OS / editor
+.DS_Store
+Thumbs.db
+*.swp
+.vscode/
+.idea/
+
+# Node (tooling only)
+node_modules/

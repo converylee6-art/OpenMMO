@@ -1,0 +1,48 @@
+{
+  "name": "Oriana",
+  "description": "Region layout transcribed from the Oriana Region map. Positions are normalised map coordinates (0-1, origin top-left) used to lay out the overworld and the in-game map.",
+  "locations": [
+    { "id": 1,  "key": "pine_town",      "name": "Pine Town",      "type": "town",    "tags": ["start"],                       "pos": [0.08, 0.20] },
+    { "id": 2,  "key": "oak_grove",      "name": "Oak Grove",      "type": "town",    "tags": ["forest"],                      "pos": [0.26, 0.21] },
+    { "id": 3,  "key": "petal_city",     "name": "Petal City",     "type": "city",    "tags": ["gym"], "gym": { "number": 1, "theme": "Grass",    "badge": "Bloom Badge" },   "pos": [0.18, 0.54] },
+    { "id": 4,  "key": "dewford_island", "name": "Dewford Island", "type": "town",    "tags": ["island","surf"],               "pos": [0.12, 0.74] },
+    { "id": 5,  "key": "mossy_harbor",   "name": "Mossy Harbor",   "type": "town",    "tags": ["harbor","ferry"],              "pos": [0.29, 0.82] },
+    { "id": 6,  "key": "bloomdale_town", "name": "Bloomdale Town", "type": "town",    "tags": [],                              "pos": [0.37, 0.54] },
+    { "id": 7,  "key": "stonekeep_city", "name": "Stonekeep City", "type": "city",    "tags": ["gym","castle"], "gym": { "number": 2, "theme": "Rock",  "badge": "Keep Badge" },   "pos": [0.50, 0.66] },
+    { "id": 8,  "key": "highwind_pass",  "name": "Highwind Pass",  "type": "landmark","tags": ["mountain","cave"],             "pos": [0.50, 0.33] },
+    { "id": 9,  "key": "mist_peak_town", "name": "Mist Peak Town", "type": "town",    "tags": ["snow","summit"],               "pos": [0.50, 0.11] },
+    { "id": 10, "key": "azure_port",     "name": "Azure Port",     "type": "city",    "tags": ["gym","port","ferry"], "gym": { "number": 3, "theme": "Water", "badge": "Tide Badge" }, "pos": [0.63, 0.26] },
+    { "id": 11, "key": "verdant_city",   "name": "Verdant City",   "type": "city",    "tags": ["gym","forest"], "gym": { "number": 4, "theme": "Bug",    "badge": "Canopy Badge" }, "pos": [0.78, 0.09] },
+    { "id": 12, "key": "sunburst_desert","name": "Sunburst Desert","type": "landmark","tags": ["desert","sandstorm"],          "pos": [0.92, 0.30] },
+    { "id": 13, "key": "emberfall_town", "name": "Emberfall Town", "type": "town",    "tags": ["gym","volcano"], "gym": { "number": 5, "theme": "Fire",  "badge": "Cinder Badge" }, "pos": [0.92, 0.48] },
+    { "id": 14, "key": "sapphire_city",  "name": "Sapphire City",  "type": "city",    "tags": ["gym","coastal","hub"], "gym": { "number": 6, "theme": "Electric", "badge": "Prism Badge" }, "pos": [0.74, 0.62] },
+    { "id": 15, "key": "crystal_cove",   "name": "Crystal Cove",   "type": "town",    "tags": ["beach","gym"], "gym": { "number": 7, "theme": "Fairy", "badge": "Shell Badge" }, "pos": [0.69, 0.92] },
+    { "id": 16, "key": "victory_peak",   "name": "Victory Peak",   "type": "landmark","tags": ["league","mountaintop","gym"], "gym": { "number": 8, "theme": "Dragon", "badge": "Summit Badge" }, "pos": [0.92, 0.88] }
+  ],
+  "routes": [
+    { "id": "101", "from": "pine_town",      "to": "oak_grove",       "biome": "forest" },
+    { "id": "102", "from": "oak_grove",      "to": "petal_city",      "biome": "forest" },
+    { "id": "103", "from": "petal_city",     "to": "dewford_island",  "biome": "coast" },
+    { "id": "104", "from": "petal_city",     "to": "mossy_harbor",    "biome": "grassland" },
+    { "id": "105", "from": "petal_city",     "to": "bloomdale_town",  "biome": "grassland" },
+    { "id": "105b","from": "dewford_island", "to": "mossy_harbor",    "biome": "coast", "note": "map labels both 105; treated as a loop" },
+    { "id": "106", "from": "bloomdale_town", "to": "stonekeep_city",  "biome": "grassland" },
+    { "id": "106b","from": "stonekeep_city", "to": "highwind_pass",   "biome": "mountain", "note": "map labels both 106" },
+    { "id": "107", "from": "highwind_pass",  "to": "mist_peak_town",  "biome": "snow" },
+    { "id": "108", "from": "mist_peak_town", "to": "azure_port",      "biome": "snow_coast" },
+    { "id": "109", "from": "azure_port",     "to": "verdant_city",    "biome": "forest" },
+    { "id": "110", "from": "verdant_city",   "to": "sunburst_desert", "biome": "desert" },
+    { "id": "111", "from": "sunburst_desert","to": "emberfall_town",  "biome": "volcanic" },
+    { "id": "112", "from": "emberfall_town", "to": "sapphire_city",   "biome": "coast" },
+    { "id": "113", "from": "sapphire_city",  "to": "crystal_cove",    "biome": "beach" },
+    { "id": "114", "from": "crystal_cove",   "to": "victory_peak",    "biome": "mountain" }
+  ],
+  "ferries": [
+    { "from": "mossy_harbor", "to": "azure_port" },
+    { "from": "azure_port",   "to": "sapphire_city" }
+  ],
+  "notes": [
+    "Map shows 6 labelled gyms (Petal, Stonekeep, Azure, Verdant, Emberfall, Sapphire). Crystal Cove and Victory Peak have no gym on the map; gyms 7 and 8 are proposed there and are easy to move.",
+    "Gym types are proposals based on each town's theme on the map. Change freely in this file; code reads from it."
+  ]
+}
