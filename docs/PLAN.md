@@ -43,6 +43,9 @@ tools/                 CI scripts, data validators
 
 ## 3. Milestones (each is one PR, each is playable)
 
+**Map-first decision (owner):** world quality comes before battles. Milestones M3/M8 move ahead of M4–M7.
+Environment assets are generated in Meshy from `docs/MESHY_ASSET_LIST.md`; terrain uses the Terrain3D plugin.
+
 | # | Milestone | You can test | Est. sessions |
 |---|-----------|--------------|---------------|
 | M0 | Plan + region data + repo scaffolding | read docs | this one |
