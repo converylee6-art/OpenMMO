@@ -1,0 +1,58 @@
+{
+  "key": "pine_town",
+  "display_name": "Pine Town",
+  "size": [80, 70],
+  "ground_color": [0.36, 0.56, 0.28],
+  "player_spawn": [-6, 0, 8],
+  "player_facing_deg": 0,
+  "paths": [
+    { "from": [-6, 8],   "to": [-6, -6],  "width": 3 },
+    { "from": [-6, -6],  "to": [14, -6],  "width": 3 },
+    { "from": [14, -6],  "to": [14, 10],  "width": 3 },
+    { "from": [14, -6],  "to": [34, -6],  "width": 3.5 },
+    { "from": [-6, -6],  "to": [-20, -6], "width": 2.5 },
+    { "from": [-6, 8],   "to": [8, 8],    "width": 2.5 }
+  ],
+  "buildings": [
+    { "id": "house_player",     "label": "Player's House",   "pos": [-14, -14], "size": [9, 7, 8],   "rot_deg": 0,   "color": [0.85, 0.55, 0.35], "door_side": "south", "asset": "b1_house_player" },
+    { "id": "house_neighbor_a", "label": "Neighbour's House","pos": [2, -16],   "size": [8, 5, 7],   "rot_deg": 0,   "color": [0.55, 0.65, 0.85], "door_side": "south", "asset": "b1_house_neighbor_a" },
+    { "id": "house_neighbor_b", "label": "Rival's House",    "pos": [24, -16],  "size": [8, 5, 7],   "rot_deg": 0,   "color": [0.75, 0.8, 0.5],   "door_side": "south", "asset": "b1_house_neighbor_b" },
+    { "id": "professor_lab",    "label": "Professor's Lab",  "pos": [14, 20],   "size": [16, 6, 10], "rot_deg": 180, "color": [0.9, 0.9, 0.92],   "door_side": "north", "asset": "b1_professor_lab" }
+  ],
+  "props": [
+    { "type": "sign",   "pos": [-9, 4],    "rot_deg": 0,   "text": "Pine Town — A quiet place where journeys begin." },
+    { "type": "sign",   "pos": [31, -3],   "rot_deg": 270, "text": "Route 101 → Oak Grove" },
+    { "type": "sign",   "pos": [6, 16],    "rot_deg": 0,   "text": "Oriana Pokémon Research Lab" },
+    { "type": "lamp",   "pos": [-8, -8] }, { "type": "lamp", "pos": [12, -8] }, { "type": "lamp", "pos": [16, 6] }, { "type": "lamp", "pos": [-8, 10] },
+    { "type": "bench",  "pos": [10, 10],   "rot_deg": 90 },
+    { "type": "well",   "pos": [-14, 0] },
+    { "type": "mailbox","pos": [-10, -11] },
+    { "type": "flower_bed", "pos": [-16, 8], "size": [4, 1.5] },
+    { "type": "flower_bed", "pos": [20, 14], "size": [5, 1.5] },
+    { "type": "fence",  "from": [-20, -20], "to": [-20, 4] },
+    { "type": "fence",  "from": [-20, 4],   "to": [-9, 4] },
+    { "type": "fence",  "from": [-3, -20],  "to": [8, -20] },
+    { "type": "fence",  "from": [30, -20],  "to": [30, -10] }
+  ],
+  "trees": {
+    "seed": 7,
+    "ring": { "inner": [-24, -24, 24, 24], "outer": [-40, -35, 40, 35], "count": 110, "min_spacing": 3.2 },
+    "clusters": [
+      { "center": [-26, 18], "radius": 7, "count": 10 },
+      { "center": [30, 22],  "radius": 6, "count": 8 },
+      { "center": [-2, 28],  "radius": 5, "count": 6 }
+    ],
+    "keep_out": [
+      { "from": [28, -10], "to": [40, -2] }
+    ]
+  },
+  "grass_patches": [
+    { "pos": [36, -6], "size": [6, 6], "route": "101" }
+  ],
+  "exits": [
+    { "kind": "route", "target": "route_101", "pos": [40, -6], "size": [2, 4, 8] }
+  ],
+  "water": [
+    { "pos": [-30, 26], "size": [16, 10], "label": "pond" }
+  ]
+}

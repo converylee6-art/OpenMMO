@@ -1,8 +1,6 @@
 # Godot
 .godot/
-*.import
 export_presets.cfg
-.import/
 *.translation
 
 # Third-party models/sounds are PERSONAL USE ONLY and are never committed.
